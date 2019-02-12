@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 5 Part 2</title>
+		<link rel="stylesheet" href="2.css">
+	</head>
+
+	<body>
+		<div id="container">
+
+			<div id="header">
+				<div class="left">TO THE NEW</div>				
+				<div class="right">Home &nbsp Quick Help</div>
+			</div>
+			<hr>
+
+			<div id="content">
+				<form>
+
+					<div id="form-header" class="form-center">Bug Report</div>
+
+					<div id="form-area" class="form-center">
+						<div class="field">Title:*<br>
+							<input type = text class='input-fields'>
+						</div>
+
+						<div class="field">Description:*<br>
+							<textarea id="description" rows="4" class="input-fields"></textarea>
+						</div>
+
+						<div class="field">Operating system:*<br>
+							<select class="dropdown input-fields">
+								<option value="windows">Windows</option>
+								<option value="mac">Mac</option>
+								<option value="android">Android</option>
+								<option value="linux-based">Linux Based</option>
+								<option value="ios">iOS</option>
+							</select> 
+						</div>
+
+						<div class="field">Product:*<br>
+							<select class="dropdown input-fields">
+								<option value="formoid">Formoid</option>
+								<option value="pytorch">PyTorch</option>
+								<option value="bootstrap">Bootstrap</option>
+							</select>
+						</div>
+
+						<div class="field" id="version">Version:*<br>
+							<input type = text class='input-fields'>
+						</div>
+
+						<div class="field">Licence:*<br>
+							<input type="radio"> Free &nbsp; &nbsp; 
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <input type="radio"> Business
+						</div>
+
+						<div class="field">Severity:*<br>
+							<select class="dropdown input-fields">
+								<option value="critical">Formoid</option>
+								<option value="high">High</option>
+								<option value="medium">Medium</option>
+								<option value="low">Low</option>
+							</select>
+						</div>
+
+						<div class="field">Attachments:*<br>
+							<input type = text class='input-fields'>
+						</div>
+					</div>
+
+					<div id="form-footer" class="form-center">
+						<input type="submit" value="Send">
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>
