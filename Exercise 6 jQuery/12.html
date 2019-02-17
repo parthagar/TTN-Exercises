@@ -1,0 +1,33 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 12</title>
+	</head>
+
+	<body>
+		
+		<div>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			$(document).ready( function() {
+
+				$('li').click(function(e){
+					$('li').css('color', 'red');
+					e.stopPropagation();
+				})
+
+				$('div').click(function(){
+					$('div').css('background-color', 'green');
+				})
+
+			});
+		</script>
+	</body>
+</html>

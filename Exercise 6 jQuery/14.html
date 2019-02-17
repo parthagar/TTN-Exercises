@@ -1,0 +1,39 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 14</title>
+		<style>td{text-align: center;}</style>
+	</head>
+	<body>
+		<table style="width:100%">
+			<tr>
+				<th>Height</th>
+				<th>Weight</th>
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>130</td>
+				<td>5</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>11</td>
+				<td>94</td>
+			</tr>
+		</table> 
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			$(document).ready( function() {
+
+				$('td').each(function(){
+					if($(this).text() > 10){
+						$(this).css('color', 'red');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

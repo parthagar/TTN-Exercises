@@ -1,0 +1,73 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 16</title>
+		<style>table, td, th{text-align: center; border: 2px solid  black; border-collapse: collapse;}</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			var xml;
+
+			function delrow(e){
+					idx = e.closest('tr').rowIndex - 1;
+					
+					xml.documentElement.removeChild(xml.getElementsByTagName('data')[0].children[idx]);
+					
+					$.ajax({
+						url: "16.xml",
+						method: "POST",
+						contentType: "application/xml; charset=utf-8",
+						data: xml.getElementsByTagName('data')[0].outerHTML,
+						success: function(){
+							alert('Row successfully deleted from file on server');
+						}
+					});
+
+					e.closest('tr').remove();
+			}
+
+			$(document).ready( function() {
+
+				$.ajax({
+						url: "16.xml",
+						type: "GET",
+						success: function(result){
+							
+							xml = result;
+    						var table  = "<table style='width: auto'><tbody>";
+
+    						$('data', xml).children().each(function(i){
+    							table += '<tr>';
+        						if(i == 0){
+        							cellTag = 'th';
+        							buttonColumn = '<th>Delete</th>';
+        						}
+        						else{
+        							cellTag = 'td';
+        							buttonColumn = '<td><button onclick="delrow(this)">X</button></td>';
+        						}
+        						
+
+        						var row = $(this);
+        						row.children().each(function(){
+        							table += '<' + cellTag + '>' + $(this).text() + '</' + cellTag + '>';
+        						});
+        						
+        						table += buttonColumn;
+        						table += '</tr>';
+
+        					});
+
+        					table += "</tbody></table>";
+    						$('body').prepend(table);
+    					}
+				});
+				
+			});
+
+		</script>
+	</body>
+</html>

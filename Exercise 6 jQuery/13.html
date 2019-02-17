@@ -1,0 +1,36 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 13</title>
+	</head>
+
+	<body>
+		
+		<div>
+			<p>abc</p>
+			<h1>Heading 1</h1>
+		</div>
+
+		<div>
+			<h2>Heading 2</h2>
+			<p>def</p>
+		</div>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			$(document).ready( function() {
+
+				var max_height = 0;
+				$('body').children().each(function(){
+					console.log($(this));
+					if($(this).height() > max_height){
+						max_height = $(this).height();
+					}
+				});
+
+				alert("Max height of elements is: " + max_height);
+			});
+		</script>
+	</body>
+</html>

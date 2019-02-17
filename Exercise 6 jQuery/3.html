@@ -1,0 +1,19 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 3</title>
+	</head>
+
+	<body>
+		<p class = 'abc-new'>This has class <q>-new</q></p>
+		<p class = 'new'> This doesn't have class <q>-new</q></p>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("[class$='-new']").css('color', 'red');
+			});
+		</script>
+	</body>
+</html>

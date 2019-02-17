@@ -1,0 +1,23 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 7</title>
+	</head>
+
+	<body>
+		<p class = "click">Click me</p>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			$(document).ready( function() {
+				function clicked(){ 
+					var ele = $(".click:first").clone();
+					$('.click:last').after(ele);
+				}
+
+				$('.click').click(clicked);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en-IN">
+	<head>
+		<meta charset="utf-8">
+		<title>Question 9</title>
+	</head>
+
+	<body>
+		<div>
+			<select>
+				<option value = "opt1">Option 1</option>
+				<option value = "opt2">Option 2</option>
+			</select>
+		</div>
+
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script>
+			$(document).ready( function() {
+				function appendoption(){
+					var e = $('select :selected');
+					$('select :selected').closest('div').append('<br>' + e.text());
+				}
+				$('select').on('change', appendoption);
+			});
+		</script>
+	</body>
+</html>
